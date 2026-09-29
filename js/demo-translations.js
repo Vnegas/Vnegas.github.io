@@ -1,0 +1,42 @@
+window.DEMO_TRANSLATIONS = {
+  en: {
+    back: '← Back to projects', kicker: 'UNITY · INTERACTIVE DEMO', title: 'Supermarket Simulation',
+    intro: 'Watch customers shop, queue and pay. Adjust the simulation parameters to explore how checkout capacity and timing affect the queue.',
+    controls: 'Use Play and Pause inside the simulation. To apply new parameters, use Simulate (Reset) in its settings panel.',
+    fullscreen: 'Fullscreen ↗', retry: 'Try again', loading: 'Loading simulation…',
+    error: 'The simulation could not load. Try again or open it in a browser with WebGL support.',
+    local: 'This demo needs a local web server. From the portfolio folder, run: python -m http.server 8000 — then open http://localhost:8000/supermarket.html',
+    canvas: 'Interactive supermarket simulation', progress: 'Loading simulation',
+    caption: 'The original Unity simulation, running in your browser. Desktop or a larger screen is recommended for the controls.',
+    parameters: 'Parameter guide', apply: 'Enter all three values in the simulation panel, then press Simulate (Reset) to apply them. Changing the page language keeps the simulation running.',
+    symbol: 'Parameter', meaning: 'Meaning in this simulation', effect: 'When increased',
+    lambda: 'Base interval between customers joining the checkout queue, in simulation seconds.',
+    lambdaEffect: 'Customers join the queue less frequently.',
+    mu: 'Base payment / service time per customer, in simulation seconds.',
+    muEffect: 'Each cashier takes longer to serve a customer.',
+    servers: 'Number of cashiers serving customers simultaneously. Use an integer from 1 to 10.',
+    serversEffect: 'More customers can be served at the same time.',
+    note: 'Here, λ and μ are time settings, not rates. The model adds random variation to these base times. Use positive numbers.',
+    source: 'View Unity source on GitHub ↗'
+  },
+  es: {
+    back: '← Volver a proyectos', kicker: 'UNITY · DEMO INTERACTIVA', title: 'Simulación de supermercado',
+    intro: 'Observá cómo los clientes compran, hacen fila y pagan. Ajustá los parámetros para explorar cómo la capacidad de las cajas y los tiempos afectan la fila.',
+    controls: 'Usá Play y Pausa dentro de la simulación. Para aplicar nuevos parámetros, usá Simulate (Reset) en su panel de configuración.',
+    fullscreen: 'Pantalla completa ↗', retry: 'Reintentar', loading: 'Cargando simulación…',
+    error: 'No se pudo cargar la simulación. Reintentá o abrila en un navegador compatible con WebGL.',
+    local: 'Esta demo necesita un servidor local. Desde la carpeta del portfolio, ejecutá: python -m http.server 8000 — luego abrí http://localhost:8000/supermarket.html',
+    canvas: 'Simulación interactiva de supermercado', progress: 'Carga de la simulación',
+    caption: 'La simulación original de Unity, ejecutándose en tu navegador. Para usar los controles, se recomienda una computadora o pantalla amplia.',
+    parameters: 'Guía de parámetros', apply: 'Ingresá los tres valores en el panel de la simulación y pulsá Simulate (Reset) para aplicarlos. Cambiar el idioma de esta página conserva la simulación en ejecución.',
+    symbol: 'Parámetro', meaning: 'Qué significa en esta simulación', effect: 'Al aumentarlo',
+    lambda: 'Intervalo base entre clientes que se incorporan a la fila de cajas, en segundos de simulación.',
+    lambdaEffect: 'Los clientes se incorporan a la fila con menor frecuencia.',
+    mu: 'Tiempo base de pago o atención por cliente, en segundos de simulación.',
+    muEffect: 'Cada caja tarda más en atender a un cliente.',
+    servers: 'Cantidad de cajas que atienden simultáneamente. Usá un número entero de 1 a 10.',
+    serversEffect: 'Más clientes pueden ser atendidos al mismo tiempo.',
+    note: 'Aquí λ y μ representan tiempos, no tasas. El modelo agrega variación aleatoria a esos tiempos base. Usá valores positivos.',
+    source: 'Ver código de Unity en GitHub ↗'
+  }
+};

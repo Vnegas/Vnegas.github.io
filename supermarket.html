@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supermarket Simulation — Sebastián Venegas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <script defer src="js/demo-translations.js"></script>
+  <script defer src="js/demo.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap navbar">
+  <a class="mark" href="index.html">sebastian venegas</a>
+  <div class="langtoggle" aria-label="Language / Idioma">
+    <button type="button" data-language="en">EN</button>
+    <button type="button" data-language="es">ES</button>
+  </div>
+</div></header>
+<main class="wrap demo-page">
+  <a class="back-link" href="index.html#/#more" data-i18n="back">← Back to projects</a>
+  <div class="demo-kicker" data-i18n="kicker">UNITY · INTERACTIVE DEMO</div>
+  <h1 data-i18n="title">Supermarket Simulation</h1>
+  <p class="demo-intro" data-i18n="intro">Watch customers shop, queue and pay. Adjust the simulation parameters to explore how checkout capacity and timing affect the queue.</p>
+  <div class="demo-toolbar">
+    <p data-i18n="controls">Use Play and Pause inside the simulation. To apply new parameters, use Simulate (Reset) in its settings panel.</p>
+    <button class="btn ghost" type="button" id="fullscreen" disabled data-i18n="fullscreen">Fullscreen ↗</button>
+  </div>
+  <div class="player-shell" id="player-shell">
+    <canvas id="unity-canvas" width="1920" height="1200" tabindex="0" aria-label="Interactive supermarket simulation"></canvas>
+    <div class="player-overlay" id="player-overlay">
+      <p id="load-status" role="status" aria-live="polite"></p>
+      <progress id="load-progress" max="1" value="0" aria-label="Loading simulation"></progress>
+      <button class="btn ghost" type="button" id="retry" hidden data-i18n="retry">Try again</button>
+    </div>
+  </div>
+  <p id="unity-notice" role="status" hidden></p>
+  <p class="demo-caption" data-i18n="caption">The original Unity simulation, running in your browser. Desktop or a larger screen is recommended for the controls.</p>
+  <section class="parameter-guide" aria-labelledby="parameters-title">
+    <h2 id="parameters-title" data-i18n="parameters">Parameter guide</h2>
+    <p data-i18n="apply">Enter all three values in the simulation panel, then press Simulate (Reset) to apply them. Changing the page language keeps the simulation running.</p>
+    <div class="parameter-table-wrap"><table>
+      <thead><tr><th scope="col" data-i18n="symbol">Parameter</th><th scope="col" data-i18n="meaning">Meaning in this simulation</th><th scope="col" data-i18n="effect">When increased</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">λ <span>(lambda)</span></th><td data-i18n="lambda">Base interval between customers joining the checkout queue, in simulation seconds.</td><td data-i18n="lambdaEffect">Customers join the queue less frequently.</td></tr>
+        <tr><th scope="row">μ <span>(mu)</span></th><td data-i18n="mu">Base payment / service time per customer, in simulation seconds.</td><td data-i18n="muEffect">Each cashier takes longer to serve a customer.</td></tr>
+        <tr><th scope="row">s</th><td data-i18n="servers">Number of cashiers serving customers simultaneously. Use an integer from 1 to 10.</td><td data-i18n="serversEffect">More customers can be served at the same time.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="parameter-note" data-i18n="note">Here, λ and μ are time settings, not rates. The model adds random variation to these base times. Use positive numbers.</p>
+  </section>
+  <footer class="demo-footer"><a href="https://github.com/Vnegas/Project-Modeling-Optimization/tree/main/Project" target="_blank" rel="noopener" data-i18n="source">View Unity source on GitHub ↗</a></footer>
+</main>
+</body>
+</html>
